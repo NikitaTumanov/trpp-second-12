@@ -23,7 +23,7 @@ micronaut {
 dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.18'
     compileOnly 'org.projectlombok:lombok:1.18.18'
-
+    compile 'com.opencsv:opencsv:5.3' //Недостающая зависимость
     implementation("io.micronaut:micronaut-runtime")
     implementation("io.micronaut:micronaut-validation")
     implementation("io.micronaut:micronaut-http-client")
@@ -35,7 +35,7 @@ dependencies {
 
 
 application {
-    mainClass.set("ru.mirea.Application")
+    mainClass.set("ru.mirea.trppsecond12.Application")
 }
 
 java {
@@ -62,7 +62,7 @@ javadoc {
 }
 
 shadowJar {
-    archivesBaseName = "${project.name}"
+    archivesBaseName = "${project.name} Tumanov"
     libsDirName = "${project.name}"
     classifier('')
 }
